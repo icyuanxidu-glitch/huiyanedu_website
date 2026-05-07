@@ -1,0 +1,29 @@
+
+> @onwidget/astrowind@1.0.0-beta.52 dev
+> astro dev --host 127.0.0.1 --port 4322
+
+15:43:47 [astrowind] Astrowind `./src/config.yaml` has been loaded.
+15:43:47 [types] Generated 1ms
+15:43:47 [content] Syncing content
+15:43:47 [content] Astro config changed
+15:43:47 [content] Clearing content store
+15:43:47 [content] Synced content
+15:43:47 [vite] Re-optimizing dependencies because vite config has changed
+
+ astro  v5.12.9 ready in 853 ms
+
+┃ Local    http://127.0.0.1:4322/
+
+15:43:47 watching for file changes...
+15:43:49 [200] / 246ms
+15:43:49 [200] / 257ms
+15:44:05 [200] / 6ms
+15:44:11 [200] / 4ms
+15:44:17 [200] / 4ms
+15:44:32 [200] / 4ms
+15:46:51 [watch] src/layouts/PageLayout.astro
+15:46:51 [watch] src/layouts/PageLayout.astro
+15:46:52 [200] / 61ms
+15:46:52 [200] / 6ms
+15:47:21 [200] / 5ms
+15:47:35 [200] / 7ms

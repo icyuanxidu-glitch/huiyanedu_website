@@ -1,54 +1,53 @@
 ---
-import { Icon } from 'astro-icon/components';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: '联系我们',
-  description: '联系慧研国际教育，获取一份适合你的留学路径评估。',
+  description: '联系慧研国际教育，获取初步留学路径评估。',
 };
 
-const audiences = ['学生', '家长', '合作机构'];
-const preparation = ['申请阶段', '目标国家', '专业方向', '当前学历', '成绩', '语言', '预算', '时间线'];
+const preparation = ['申请阶段', '目标国家或地区', '专业方向', '当前学历', '成绩与语言情况', '经历素材', '预算范围', '时间线'];
 ---
 
 <Layout metadata={metadata}>
   <section class="bg-[#071A31] text-white">
     <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-24">
       <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D8B45F]">Contact Huiyan</p>
-      <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-5xl">
-        获取一份适合你的留学路径评估
-      </h1>
+      <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-5xl">联系我们</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-        先从清晰沟通开始。你可以把背景、目标和时间线发给我们，我们会协助判断下一步更适合如何推进。
+        如果你正在准备留学申请，可以把背景、目标和时间线发给我们。我们会先帮助你判断下一步更适合如何推进。
       </p>
-      <div class="mt-9">
-        <a
-          class="inline-flex items-center justify-center rounded-sm bg-[#D8B45F] px-6 py-3 text-base font-semibold text-[#071A31] transition hover:bg-[#E5C878]"
-          href="mailto:huiyanliuxue.info@gmail.com"
-        >
-          预约免费咨询
-        </a>
-      </div>
     </div>
   </section>
 
-  <section class="bg-white py-20">
+  <section class="bg-white py-16 sm:py-20">
     <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3">
       <article class="rounded-sm border border-slate-200 p-6 lg:col-span-1">
-        <Icon name="tabler:mail" class="mb-5 h-9 w-9 text-[#B8943F]" />
         <h2 class="text-2xl font-bold text-[#0B1F3A]">联系方式</h2>
         <p class="mt-4 leading-7 text-slate-600">Email: huiyanliuxue.info@gmail.com</p>
+        <div class="mt-6 border-t border-slate-200 pt-6">
+          <img
+            src="/images/huiyan-wechat-qr.jpg"
+            alt="慧研顾问微信二维码"
+            class="mx-auto aspect-square w-full max-w-[220px] rounded-sm border border-slate-200 object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="mt-4 text-center text-sm leading-6 text-slate-600">扫码添加慧研顾问微信，获取初步留学路径评估。</p>
+        </div>
       </article>
       <article class="rounded-sm border border-slate-200 p-6 lg:col-span-2">
-        <h2 class="text-2xl font-bold text-[#0B1F3A]">咨询适合人群</h2>
+        <h2 class="text-2xl font-bold text-[#0B1F3A]">适合咨询的人群</h2>
         <div class="mt-5 grid gap-4 sm:grid-cols-3">
-          {audiences.map((item) => <div class="bg-slate-50 p-4 font-semibold text-[#0B1F3A]">{item}</div>)}
+          <div class="bg-slate-50 p-4 font-semibold text-[#0B1F3A]">学生</div>
+          <div class="bg-slate-50 p-4 font-semibold text-[#0B1F3A]">家长</div>
+          <div class="bg-slate-50 p-4 font-semibold text-[#0B1F3A]">合作机构</div>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="bg-slate-50 py-20">
+  <section class="bg-slate-50 py-16 sm:py-20">
     <div class="mx-auto max-w-7xl px-4 sm:px-6">
       <div class="max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Before Consultation</p>
