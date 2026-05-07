@@ -1,0 +1,68 @@
+---
+import { Icon } from 'astro-icon/components';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '升学路径',
+  description: '了解本科直申、预科、国际大一、硕士预科、Top-up、硕士和博士申请等英联邦常见升学路径。',
+};
+
+const pathways = [
+  ['本科直申', '适合学术成绩、语言能力和课程背景已经满足本科入学要求的学生，重点在专业选择、院校梯度和申请材料表达。'],
+  ['Foundation 预科', '适合需要通过桥梁课程衔接本科的学生，通常关注升读要求、专业方向和后续本科学位路径。'],
+  ['International Year One 国际大一', '适合希望通过国际大一衔接本科二年级的学生，需要评估课程可选范围和升读条件。'],
+  ['Pre-Master 硕士预科', '适合需要提升学术、语言或专业衔接能力后进入硕士阶段的学生。'],
+  ['Top-up 专升本', '适合希望通过英国本科最后一年完成学历衔接的学生，后续可继续规划硕士申请。'],
+  ['Master 硕士申请', '适合本科在读或毕业生，重点评估专业匹配、背景竞争力、文书叙事和申请时机。'],
+  ['PhD 博士申请', '适合具备研究兴趣和学术积累的学生，重点在研究方向、导师沟通和研究计划准备。'],
+];
+
+const factors = ['学术背景', '语言成绩', '目标国家', '专业方向', '预算范围', '城市偏好', '职业目标', '申请时间线'];
+---
+
+<Layout metadata={metadata}>
+  <section class="bg-[#071A31] text-white">
+    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-24">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D8B45F]">Pathways</p>
+      <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-5xl">英联邦升学路径规划</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
+        不同路径适合不同背景。清楚理解路径差异，才能做出更稳妥、更可执行的申请决定。
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {
+          pathways.map(([title, description]) => (
+            <article class="rounded-sm border border-slate-200 bg-white p-6 shadow-sm">
+              <Icon name="tabler:route" class="mb-5 h-8 w-8 text-[#B8943F]" />
+              <h2 class="text-xl font-bold text-[#0B1F3A]">{title}</h2>
+              <p class="mt-3 leading-7 text-slate-600">{description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-20">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr]">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Decision Factors</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">路径选择看什么</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          家长和合作机构通常最需要先看清楚：学生目前站在哪里，下一步是否能衔接，以及长期目标是否一致。
+        </p>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          factors.map((factor) => (
+            <div class="rounded-sm border border-slate-200 bg-white p-5 font-semibold text-[#0B1F3A]">{factor}</div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
