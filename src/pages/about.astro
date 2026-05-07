@@ -2,14 +2,30 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: '关于慧研',
-  description: '了解慧研国际教育的团队定位、服务方式与申请陪伴理念。',
+  title: '关于慧研国际教育 | 英国注册国际教育咨询机构',
+  description: '慧研国际教育是一家英国注册国际教育咨询机构，专注英联邦本科、硕士、博士申请规划与长期教育支持。',
 };
 
+const methods = [
+  { title: '先理解学生，再设计路径', text: '申请规划从学生的真实背景、能力边界、家庭预算和长期目标开始，而不是先套院校清单。' },
+  { title: '先判断风险，再推进申请', text: '提前识别均分、语言、专业跨度、时间线和资金准备中的关键风险，减少后期被动补救。' },
+  { title: '先建立逻辑，再书写材料', text: '文书不是经历罗列，而是围绕申请动机、能力证据和专业匹配度建立论证。' },
+  { title: '先看长期发展，再看短期录取', text: '我们关注学生能否适应课程、完成学业，并与后续职业或研究路径衔接。' },
+];
+
+const team = [
+  { name: 'Alex Du / 杜元喜', role: '联合创始人，首席执行官', text: 'Imperial College London 背景，专注院校定位、专业方向规划、长期职业发展衔接。' },
+  { name: 'Wendy Wang / 王妍', role: '联合创始人，文书规划总监', text: 'University of Leeds 博士及博士后背景，University of Nottingham 硕士，专注 PS、Research Proposal、CV 和高竞争力申请材料。' },
+  { name: 'Rachel Zhao / 赵元莹', role: '职业规划方向', text: 'Imperial College London 背景，英国本地金融行业经验，专注 Graduate Scheme、简历优化、面试辅导。' },
+  { name: 'Ricardo Li / 李彦坤', role: '学术辅导方向', text: 'Imperial College London 背景，专注本科课程辅导、考试准备、论文指导。' },
+  { name: 'Jerry Qi / 齐月', role: '英国本地事务方向', text: 'University of Manchester 背景，长期英国本地经验，专注签证续签、英国生活衔接和本地事务支持。' },
+];
+
 const values = [
-  { title: '本地视角', text: '团队长期理解英国高校教学、研究和申请沟通语境，帮助学生更准确地表达学术潜力。' },
-  { title: '非流水线', text: '每位学生的背景、节奏和目标不同，申请方案需要基于真实材料和阶段性反馈逐步调整。' },
-  { title: '全周期陪伴', text: '从早期规划、申请材料到面试准备和行前衔接，关注的不只是提交申请本身。' },
+  { title: '诚信透明', text: '清楚说明机会、限制和风险，不使用夸大承诺替代专业判断。' },
+  { title: '学生为中心', text: '服务围绕学生真实背景与长期发展展开，而不是单纯追逐短期结果。' },
+  { title: '卓越执行', text: '把规划拆成可执行任务，重视材料质量、时间管理和沟通反馈。' },
+  { title: '持续更新', text: '持续跟踪政策、院校要求、课程变化和就业环境，保持建议的现实性。' },
 ];
 ---
 
@@ -19,29 +35,84 @@ const values = [
       <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D8B45F]">About Huiyan</p>
       <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-5xl">关于慧研国际教育</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-        慧研国际教育由英国本地硕博导师团队参与服务，专注为计划申请海外本科、硕士与博士项目的学生提供规划、材料、面试和落地陪伴。
+        英国本地团队，以长期规划视角陪伴学生完成关键升学决策。
       </p>
     </div>
   </section>
 
   <section class="bg-white py-16 sm:py-20">
-    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3">
-      {values.map((item) => (
-        <article class="rounded-sm border border-slate-200 p-6">
-          <h2 class="text-2xl font-bold text-[#0B1F3A]">{item.title}</h2>
-          <p class="mt-4 leading-7 text-slate-600">{item.text}</p>
-        </article>
-      ))}
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-3">
+      <div class="lg:col-span-1">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Who We Are</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">机构介绍</h2>
+      </div>
+      <div class="space-y-5 text-lg leading-8 text-slate-600 lg:col-span-2">
+        <p>慧研国际教育是一家英国注册国际教育咨询机构，专注英联邦国家本科、硕士、博士申请规划。</p>
+        <p>团队由拥有英国学习、科研、申请和职业发展经验的顾问组成，服务从申请定位、材料准备延伸至学术辅导、职业规划和海外落地支持。</p>
+        <p>我们不以模板化流程替代真实判断，而是结合学生背景、目标国家、预算、专业方向和职业路径，做系统化设计。</p>
+      </div>
     </div>
   </section>
 
   <section class="bg-slate-50 py-16 sm:py-20">
-    <div class="mx-auto max-w-4xl px-4 sm:px-6">
-      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Our Approach</p>
-      <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">先理解人，再设计申请路径</h2>
-      <p class="mt-5 text-lg leading-8 text-slate-600">
-        我们重视学生已有经历背后的动机、能力和成长线索。申请方案不会围绕单一排名或简单模板展开，而是结合目标专业要求、学生当下阶段和可投入时间，形成更稳健的推进方式。
-      </p>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Our Method</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">我们的方法</h2>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {methods.map((item) => (
+          <article class="rounded-sm border border-slate-200 bg-white p-6">
+            <h3 class="text-xl font-bold text-[#0B1F3A]">{item.title}</h3>
+            <p class="mt-4 leading-7 text-slate-600">{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#071A31] py-16 text-white sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#D8B45F]">Professional & Compliance</p>
+      <h2 class="mt-3 text-3xl font-bold tracking-normal md:text-4xl">专业与合规</h2>
+      <div class="mt-10 grid gap-4 md:grid-cols-4">
+        <div class="rounded-sm border border-white/15 bg-white/5 p-5 font-semibold">UK registered company</div>
+        <div class="rounded-sm border border-white/15 bg-white/5 p-5 font-semibold">Company No. 17079208</div>
+        <div class="rounded-sm border border-white/15 bg-white/5 p-5 font-semibold">British Council UK agent and counsellor training certified team</div>
+        <div class="rounded-sm border border-white/15 bg-white/5 p-5 font-semibold">不做夸大承诺，坚持真实评估</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Team</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">团队介绍</h2>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {team.map((member) => (
+          <article class="rounded-sm border border-slate-200 p-6">
+            <h3 class="text-xl font-bold text-[#0B1F3A]">{member.name}</h3>
+            <p class="mt-2 font-semibold text-[#B8943F]">{member.role}</p>
+            <p class="mt-4 leading-7 text-slate-600">{member.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <h2 class="text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">价值观</h2>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {values.map((item) => (
+          <article class="rounded-sm border border-slate-200 bg-white p-6">
+            <h3 class="text-xl font-bold text-[#0B1F3A]">{item.title}</h3>
+            <p class="mt-4 leading-7 text-slate-600">{item.text}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 </Layout>

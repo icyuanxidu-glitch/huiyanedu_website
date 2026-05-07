@@ -2,16 +2,22 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: '升学路径',
-  description: '慧研国际教育支持本科、硕士、博士及转专业申请路径规划。',
+  title: '升学路径 | Foundation、Pre-Master、Top-up 与英联邦申请路线',
+  description: '慧研国际教育帮助学生判断本科直申、Foundation、International Year One、Pre-Master、Top-up、硕士与博士申请路径。',
 };
 
 const pathways = [
-  { title: '本科申请', text: '适合准备英国及海外本科申请的学生，重点关注课程选择、活动积累、文书主题和时间安排。' },
-  { title: '硕士申请', text: '适合本科在读或毕业学生，重点关注专业匹配、背景提升、材料表达和多轮申请节奏。' },
-  { title: '博士申请', text: '适合有研究兴趣和学术积累的学生，重点关注研究方向、导师沟通、研究计划和资金信息。' },
-  { title: '转专业与跨学科申请', text: '适合希望调整方向的学生，重点梳理已有经历与目标专业之间的逻辑桥梁。' },
+  { title: '本科直申', audience: '学术成绩、语言和活动经历较完整的高中阶段学生', advantage: '节省时间，直接进入目标本科课程', risk: '对成绩、语言和申请材料要求更集中', preparation: '成绩单、语言、推荐信、个人陈述、活动经历', support: '评估专业匹配、院校层级和申请材料逻辑' },
+  { title: 'Foundation 预科', audience: '需要补足学术或语言衔接的本科申请者', advantage: '提供进入本科前的学术与语言过渡', risk: '需关注升读要求和可衔接专业范围', preparation: '高中成绩、语言规划、目标专业方向', support: '比较预科体系、升读要求和后续风险' },
+  { title: 'International Year One 国际大一', audience: '希望以桥梁课程衔接本科二年级的学生', advantage: '路径更紧凑，适合部分专业和院校', risk: '专业覆盖有限，升读成绩要求需提前确认', preparation: '学术成绩、语言、专业适配证明', support: '判断是否适合 IYO 以及后续升读可能性' },
+  { title: 'Pre-Master 硕士预科', audience: '本科背景、均分、语言或专业衔接暂未达到直申要求的学生', advantage: '为硕士课程提供过渡和补强', risk: '并非所有专业都适合，升读规则差异较大', preparation: '本科成绩、语言、专业方向和预算', support: '分析直申与预科路径的机会成本' },
+  { title: 'Top-up 专升本', audience: '专科、HND 或相关背景学生', advantage: '用较短时间完成本科学位衔接', risk: '专业衔接和后续硕士选择需要谨慎判断', preparation: '专科成绩、课程描述、语言和目标方向', support: '匹配 Top-up 专业、院校和后续硕士路径' },
+  { title: 'Master 硕士申请', audience: '本科在读、毕业生或转专业申请者', advantage: '专业选择丰富，可与职业目标紧密衔接', risk: '热门专业竞争高，材料逻辑和时间线要求高', preparation: '成绩单、CV、PS、推荐信、语言和经历素材', support: '建立申请组合、材料框架和执行节奏' },
+  { title: 'PhD 博士申请', audience: '具备研究兴趣、学术基础或科研经历的学生', advantage: '适合长期学术研究或高阶专业发展', risk: '导师匹配、研究计划和资金信息复杂', preparation: '研究方向、Research Proposal、CV、论文或科研经历', support: '梳理方向、导师沟通和研究计划结构' },
 ];
+
+const logic = ['当前学历', '学术成绩', '语言成绩', '专业方向', '目标国家', '预算范围', '申请时间线', '家庭预期', '职业目标'];
+const mistakes = ['只看排名，忽略课程匹配', '忽略语言要求和时间线', '低估签证和资金准备', '忽略城市成本和就业资源', '把预科、国际大一、Top-up、Pre-Master 混为一谈'];
 ---
 
 <Layout metadata={metadata}>
@@ -20,28 +26,61 @@ const pathways = [
       <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D8B45F]">Study Pathways</p>
       <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-5xl">升学路径</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-        不同阶段的申请重点不同。慧研帮助学生先确认方向，再建立材料、经历和时间线之间的配合。
+        不同阶段的学生适合不同路径。慧研帮助学生在学历背景、成绩、语言、预算、时间线和职业目标之间建立更合理的选择。
       </p>
     </div>
   </section>
 
   <section class="bg-white py-16 sm:py-20">
-    <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-2">
-      {pathways.map((item) => (
-        <article class="rounded-sm border border-slate-200 p-6">
-          <h2 class="text-2xl font-bold text-[#0B1F3A]">{item.title}</h2>
-          <p class="mt-4 leading-7 text-slate-600">{item.text}</p>
-        </article>
-      ))}
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Pathway Map</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">路径总览</h2>
+      </div>
+      <div class="mt-10 grid gap-5 lg:grid-cols-2">
+        {pathways.map((item) => (
+          <article class="rounded-sm border border-slate-200 p-6">
+            <h3 class="text-2xl font-bold text-[#0B1F3A]">{item.title}</h3>
+            <dl class="mt-5 grid gap-3 text-sm leading-6 text-slate-600 sm:grid-cols-2">
+              <div><dt class="font-semibold text-[#0B1F3A]">适合人群</dt><dd>{item.audience}</dd></div>
+              <div><dt class="font-semibold text-[#0B1F3A]">核心优势</dt><dd>{item.advantage}</dd></div>
+              <div><dt class="font-semibold text-[#0B1F3A]">主要风险</dt><dd>{item.risk}</dd></div>
+              <div><dt class="font-semibold text-[#0B1F3A]">需要准备什么</dt><dd>{item.preparation}</dd></div>
+              <div class="sm:col-span-2"><dt class="font-semibold text-[#0B1F3A]">慧研如何支持</dt><dd>{item.support}</dd></div>
+            </dl>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
   <section class="bg-slate-50 py-16 sm:py-20">
-    <div class="mx-auto max-w-4xl px-4 sm:px-6">
-      <h2 class="text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">路径评估看什么</h2>
-      <p class="mt-5 text-lg leading-8 text-slate-600">
-        初步评估通常会结合学术成绩、语言情况、专业背景、实践经历、目标地区、预算、申请时间和个人偏好。评估结果用于明确下一步准备重点，不构成录取承诺。
-      </p>
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Decision Logic</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">路径选择逻辑</h2>
+      </div>
+      <div class="grid gap-3 sm:grid-cols-3 lg:col-span-2">
+        {logic.map((item) => <div class="rounded-sm border border-slate-200 bg-white p-4 font-semibold text-[#0B1F3A]">{item}</div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <h2 class="text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">常见误区</h2>
+      <div class="mt-10 grid gap-4 md:grid-cols-5">
+        {mistakes.map((item) => <div class="rounded-sm border border-slate-200 p-5 font-semibold leading-7 text-[#0B1F3A]">{item}</div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#071A31] py-16 text-white sm:py-20">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between">
+      <h2 class="text-3xl font-bold tracking-normal md:text-4xl">不知道适合哪条路径？</h2>
+      <a class="inline-flex rounded-sm bg-[#D8B45F] px-6 py-3 font-semibold text-[#071A31] transition hover:bg-[#E5C878]" href="/contact">
+        获取路径评估
+      </a>
     </div>
   </section>
 </Layout>

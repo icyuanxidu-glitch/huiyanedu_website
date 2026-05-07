@@ -2,18 +2,25 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: '服务体系',
-  description: '慧研国际教育提供申请规划、文书辅导、面试准备、博士套磁与落地陪伴等服务。',
+  title: '服务体系 | 本科、硕士、博士与英联邦升学规划',
+  description: '慧研国际教育提供本科、硕士、博士、预科、Top-up、学术辅导、职业规划与海外落地支持。',
 };
 
-const items = [
-  { title: '前期定位与规划', text: '梳理背景、目标专业、院校层级、时间线和风险点，形成阶段性申请策略。' },
-  { title: '文书与材料辅导', text: '围绕个人陈述、简历、推荐信素材和作品集逻辑，帮助学生建立清晰表达。' },
-  { title: '面试与沟通准备', text: '针对面试、导师沟通或项目说明场景，训练表达结构、案例选择和答题节奏。' },
-  { title: '博士申请支持', text: '协助研究方向梳理、导师匹配思路、研究计划结构和邮件沟通准备。' },
-  { title: '行前与落地陪伴', text: '提供签证、住宿、行前清单和初到英国适应阶段的信息支持。' },
-  { title: '阶段复盘', text: '根据申请进度、材料反馈和学生状态进行复盘，及时调整后续推进重点。' },
+const overview = [
+  { title: '本科申请规划', audience: '高中生、国际课程学生、转轨学生', focus: '路径判断、课程选择、活动与材料规划', deliverable: '申请时间线、院校组合、文书框架与材料清单' },
+  { title: '硕士申请规划', audience: '本科在读、毕业生、转专业申请者', focus: '专业匹配、院校定位、材料论证', deliverable: '选校方案、CV/PS 支持、申请执行节奏' },
+  { title: '博士申请规划', audience: '研究型硕士、本科高潜学生、科研背景学生', focus: '研究方向、导师匹配、Research Proposal', deliverable: '研究计划结构、导师沟通策略、申请材料支持' },
+  { title: 'Foundation / International Year One / Pre-Master', audience: '需要桥梁课程或过渡路径的学生', focus: '课程适配、升读要求、风险判断', deliverable: '路径比较、入学要求清单、后续升读规划' },
+  { title: 'Top-up 专升本', audience: '专科、HND 或相关背景学生', focus: '专业衔接、学校选择、后续硕士可能性', deliverable: 'Top-up 路径评估、申请材料和时间线' },
+  { title: '学术辅导', audience: '申请前或入学后需要学术支持的学生', focus: '课程理解、写作能力、论文与考试准备', deliverable: '辅导计划、写作反馈、学习节奏建议' },
+  { title: '职业规划', audience: '希望衔接实习、Graduate Scheme 或长期职业路径的学生', focus: '方向分析、简历、LinkedIn、面试', deliverable: '职业路径建议、简历优化、模拟面试反馈' },
+  { title: '海外落地支持', audience: '即将入学或已在海外学习的学生', focus: '签证、住宿、行前、生活衔接', deliverable: '行前清单、本地事务建议、后续服务衔接' },
 ];
+
+const applicationItems = ['背景评估', '国家与院校定位', '专业方向选择', '文书框架搭建', 'CV / PS / Reference Letter / Research Proposal 支持', '申请表填写与递交节奏', '面试准备', 'Offer 后续决策', '签证与行前准备'];
+const academicItems = ['申请前学术背景提升', '本科课程辅导', '硕士课程与论文辅导', 'Research Proposal 支持', '学术写作优化', '学术申诉与特殊情况说明支持'];
+const careerItems = ['职业方向分析', '简历优化', 'LinkedIn 形象优化', '模拟面试', 'Graduate Scheme 申请', '实习路径规划', '英国本地职场认知辅导'];
+const boundaries = ['不承诺保证录取', '不替代学生真实经历', '不制造虚假材料', '不鼓励不诚信申请', '所有建议基于学生真实背景和申请目标'];
 ---
 
 <Layout metadata={metadata}>
@@ -22,19 +29,68 @@ const items = [
       <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D8B45F]">Service System</p>
       <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-5xl">服务体系</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-        慧研以申请目标和学生背景为起点，把选校、材料、面试、沟通和落地准备拆解成可执行的步骤。
+        从路径规划、材料准备、申请递交，到签证行前、学术支持与职业规划，建立完整的留学服务链路。
       </p>
     </div>
   </section>
 
   <section class="bg-white py-16 sm:py-20">
-    <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
-      {items.map((item) => (
-        <article class="rounded-sm border border-slate-200 p-6">
-          <h2 class="text-xl font-bold text-[#0B1F3A]">{item.title}</h2>
-          <p class="mt-4 leading-7 text-slate-600">{item.text}</p>
-        </article>
-      ))}
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Overview</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">服务总览</h2>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2">
+        {overview.map((item) => (
+          <article class="rounded-sm border border-slate-200 p-6">
+            <h3 class="text-xl font-bold text-[#0B1F3A]">{item.title}</h3>
+            <dl class="mt-4 space-y-3 text-sm leading-6 text-slate-600">
+              <div><dt class="font-semibold text-[#0B1F3A]">适合人群</dt><dd>{item.audience}</dd></div>
+              <div><dt class="font-semibold text-[#0B1F3A]">服务重点</dt><dd>{item.focus}</dd></div>
+              <div><dt class="font-semibold text-[#0B1F3A]">交付内容</dt><dd>{item.deliverable}</dd></div>
+            </dl>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-16 sm:py-20">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Application</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">留学申请服务</h2>
+      </div>
+      <div class="grid gap-3 sm:grid-cols-2 lg:col-span-2">
+        {applicationItems.map((item) => <div class="rounded-sm border border-slate-200 bg-white p-4 font-semibold text-[#0B1F3A]">{item}</div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 sm:py-20">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2">
+      <div>
+        <h2 class="text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">学术辅导服务</h2>
+        <div class="mt-8 grid gap-3">
+          {academicItems.map((item) => <div class="rounded-sm border border-slate-200 p-4 font-semibold text-[#0B1F3A]">{item}</div>)}
+        </div>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">职业规划服务</h2>
+        <div class="mt-8 grid gap-3">
+          {careerItems.map((item) => <div class="rounded-sm border border-slate-200 p-4 font-semibold text-[#0B1F3A]">{item}</div>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#071A31] py-16 text-white sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#D8B45F]">Service Boundary</p>
+      <h2 class="mt-3 text-3xl font-bold tracking-normal md:text-4xl">服务边界</h2>
+      <div class="mt-10 grid gap-4 md:grid-cols-5">
+        {boundaries.map((item) => <div class="rounded-sm border border-white/15 bg-white/5 p-5 font-semibold">{item}</div>)}
+      </div>
     </div>
   </section>
 </Layout>

@@ -2,34 +2,60 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: '慧研国际教育',
+  title: '慧研国际教育 | 英国本地硕博导师团队 · 全周期留学规划',
   ignoreTitleTemplate: true,
-  description: '英国本地硕博导师团队，为学生提供非流水线的留学申请规划、文书辅导、面试准备与落地陪伴。',
+  description:
+    '慧研国际教育专注英联邦本科、硕士、博士申请规划，以英国本地硕博导师团队、非流水线服务和全周期陪伴，帮助学生建立稳健升学路径。',
 };
 
-const strengths = [
-  '英国本地硕博导师团队参与规划与反馈',
-  '围绕学生背景、目标和时间线定制申请节奏',
-  '从选校定位到入学前准备提供全周期陪伴',
+const trustPoints = [
+  '英国注册公司：HUIYAN INTERNATIONAL EDUCATION LIMITED，Company No. 17079208',
+  'British Council UK agent and counsellor training certified team',
+  '英国本地硕博导师与行业顾问团队',
+  '覆盖本科、硕士、博士、学术辅导与职业规划',
+];
+
+const problems = [
+  { title: '信息差', text: '不清楚不同国家、院校、专业和路径之间的真实差异，容易被单一排名或片面信息带偏。' },
+  { title: '路径错配', text: '只看院校名气，却忽略课程结构、城市资源、就业方向、预算和个人适应度。' },
+  { title: '材料空泛', text: '文书只堆经历，没有形成清晰的申请逻辑、个人定位和专业动机。' },
+  { title: '时间失控', text: '语言、材料、申请、面试、签证和行前准备缺少统一节奏，后期被动补救。' },
 ];
 
 const services = [
-  { title: '申请定位', text: '梳理学术背景、经历亮点、目标专业与时间线，形成清晰可执行的申请路径。' },
-  { title: '材料打磨', text: '围绕个人陈述、简历、推荐信素材和作品集逻辑，协助学生表达真实优势。' },
-  { title: '面试准备', text: '结合目标项目常见考察方向，进行表达结构、案例组织和临场沟通训练。' },
-  { title: '落地支持', text: '在签证、住宿、行前准备和初到英国适应阶段提供实用陪伴。' },
+  { title: '本科申请规划', text: '结合课程体系、活动经历、专业兴趣和家庭预算，判断本科直申、预科或国际大一路径。' },
+  { title: '硕士申请规划', text: '围绕本科背景、均分、专业匹配度和职业目标，设计更稳健的院校与专业组合。' },
+  { title: '博士申请规划', text: '协助梳理研究方向、导师匹配逻辑、研究计划结构和申请沟通节奏。' },
+  { title: 'Foundation / International Year One / Pre-Master', text: '帮助学生区分不同桥梁课程的适合人群、风险点和后续升读逻辑。' },
+  { title: 'Top-up 专升本', text: '面向专科或相关背景学生，评估英国 Top-up 路径、专业衔接和后续硕士可能性。' },
+  { title: '学术辅导与职业规划', text: '延伸至课程辅导、论文支持、简历优化、面试准备和英国本地职业路径认知。' },
+];
+
+const process = [
+  { step: '听', title: '听取需求', text: '收集背景、专业、目标、预算、语言和时间线，先理解学生与家庭的真实约束。' },
+  { step: '定', title: '方案制定', text: '匹配国家、院校、专业和路径，形成有层次的申请组合与准备清单。' },
+  { step: '论', title: '方案论证', text: '解释机会、风险、替代方案和执行优先级，避免只给结论、不讲逻辑。' },
+  { step: '行', title: '执行落地', text: '推进材料、申请、面试、签证和行前衔接，让计划真正落到时间表里。' },
+];
+
+const reasons = [
+  { title: '英国本地视角', text: '理解英国高校课程结构、考核方式、城市资源和职业路径，而不是只看排名列表。' },
+  { title: '硕博导师参与', text: '导师参与选校逻辑、专业匹配和材料论证，不只是做文书排版。' },
+  { title: '全周期陪伴', text: '覆盖申请前、申请中、签证行前、入学适应、学术支持和职业准备。' },
+  { title: '非流水线交付', text: '每个学生单独梳理背景、目标、预算、风险和可执行节奏。' },
+  { title: '面向长期结果', text: '不只看能否拿到录取，也关注能否读得下、适应得好、毕业后能衔接职业路径。' },
 ];
 ---
 
 <Layout metadata={metadata}>
   <section class="bg-[#071A31] text-white">
     <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28">
-      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D8B45F]">Huiyan Education</p>
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D8B45F]">Huiyan International Education</p>
       <h1 class="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-6xl">
         英国本地硕博导师团队，陪你走完整个留学申请周期
       </h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-        慧研国际教育专注本科、硕士、博士申请规划，以非流水线方式理解每位学生的背景与目标，帮助申请者建立稳健、真实、可持续的升学路径。
+        慧研国际教育专注英联邦本科、硕士、博士申请规划，以非流水线方式理解每位学生的背景、目标和时间线，帮助申请者建立稳健、真实、可持续的升学路径。
       </p>
       <div class="mt-9 flex flex-wrap gap-3">
         <a class="rounded-sm bg-[#D8B45F] px-6 py-3 font-semibold text-[#071A31] transition hover:bg-[#E5C878]" href="/contact">
@@ -42,13 +68,10 @@ const services = [
     </div>
   </section>
 
-  <section class="bg-white py-16 sm:py-20">
-    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3">
-      {strengths.map((item) => (
-        <article class="rounded-sm border border-slate-200 p-6">
-          <div class="h-1 w-12 bg-[#D8B45F]"></div>
-          <p class="mt-5 text-lg font-semibold leading-8 text-[#0B1F3A]">{item}</p>
-        </article>
+  <section class="bg-white py-10">
+    <div class="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
+      {trustPoints.map((item) => (
+        <div class="border-l-2 border-[#D8B45F] bg-slate-50 p-5 text-sm font-semibold leading-6 text-[#0B1F3A]">{item}</div>
       ))}
     </div>
   </section>
@@ -56,14 +79,11 @@ const services = [
   <section class="bg-slate-50 py-16 sm:py-20">
     <div class="mx-auto max-w-7xl px-4 sm:px-6">
       <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">What We Do</p>
-        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">把复杂申请拆成清晰步骤</h2>
-        <p class="mt-4 text-lg leading-8 text-slate-600">
-          我们不会用统一模板替代个人判断，而是围绕学生的专业方向、经历积累、申请阶段和目标院校要求，逐步推进每一个关键环节。
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">What We Solve</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">我们解决什么问题</h2>
       </div>
-      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {services.map((item) => (
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {problems.map((item) => (
           <article class="rounded-sm border border-slate-200 bg-white p-6">
             <h3 class="text-xl font-bold text-[#0B1F3A]">{item.title}</h3>
             <p class="mt-4 leading-7 text-slate-600">{item.text}</p>
@@ -76,32 +96,79 @@ const services = [
   <section class="bg-white py-16 sm:py-20">
     <div class="mx-auto max-w-7xl px-4 sm:px-6">
       <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Core Services</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">核心服务</h2>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((item) => (
+          <article class="rounded-sm border border-slate-200 p-6">
+            <h3 class="text-xl font-bold text-[#0B1F3A]">{item.title}</h3>
+            <p class="mt-4 leading-7 text-slate-600">{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#071A31] py-16 text-white sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#D8B45F]">Process</p>
+      <h2 class="mt-3 text-3xl font-bold tracking-normal md:text-4xl">申请流程：听、定、论、行</h2>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {process.map((item) => (
+          <article class="rounded-sm border border-white/15 bg-white/5 p-6">
+            <div class="flex h-11 w-11 items-center justify-center rounded-sm bg-[#D8B45F] text-xl font-bold text-[#071A31]">{item.step}</div>
+            <h3 class="mt-5 text-xl font-bold">{item.title}</h3>
+            <p class="mt-4 leading-7 text-slate-200">{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Selected Outcomes</p>
         <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">2023–2025 慧研录取精选</h2>
         <p class="mt-4 text-lg leading-8 text-slate-600">
-          以下内容为慧研过往服务成果展示，具体申请结果因学生背景、申请阶段、目标院校及当年录取政策而异。
+          以下内容为慧研过往服务成果展示，具体申请结果因学生背景、申请阶段、目标院校及当年录取政策而异。慧研不承诺保证录取，而是通过系统规划与高质量执行提升申请质量。
         </p>
       </div>
       <div class="mt-10 overflow-hidden rounded-sm border border-slate-200 bg-slate-50">
-        <img
-          src="/images/huiyan-offer-wall.png"
-          alt="2023–2025 慧研录取精选"
-          class="h-auto w-full object-contain"
-          loading="lazy"
-          decoding="async"
-        />
+        <img src="/images/huiyan-offer-wall.png" alt="2023–2025 慧研录取精选" class="h-auto w-full object-contain" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">Why Huiyan</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">为什么选择慧研</h2>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {reasons.map((item) => (
+          <article class="rounded-sm border border-slate-200 bg-white p-6">
+            <h3 class="text-xl font-bold text-[#0B1F3A]">{item.title}</h3>
+            <p class="mt-4 leading-7 text-slate-600">{item.text}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
   <section class="bg-[#071A31] py-16 text-white sm:py-20">
     <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between">
-      <div>
+      <div class="max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#D8B45F]">Start With Clarity</p>
         <h2 class="mt-3 text-3xl font-bold tracking-normal md:text-4xl">先做一次真实的路径评估</h2>
+        <p class="mt-4 leading-7 text-slate-200">
+          告诉我们你的申请阶段、目标国家、专业方向、当前成绩、语言情况和预算，我们会帮你判断下一步应该优先解决什么。
+        </p>
       </div>
-      <a class="inline-flex rounded-sm bg-[#D8B45F] px-6 py-3 font-semibold text-[#071A31] transition hover:bg-[#E5C878]" href="/contact">
-        联系我们
+      <a class="inline-flex shrink-0 rounded-sm bg-[#D8B45F] px-6 py-3 font-semibold text-[#071A31] transition hover:bg-[#E5C878]" href="/contact">
+        预约免费评估
       </a>
     </div>
   </section>

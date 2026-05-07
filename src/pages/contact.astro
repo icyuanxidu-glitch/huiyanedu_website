@@ -2,11 +2,28 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: '联系我们',
-  description: '联系慧研国际教育，获取初步留学路径评估。',
+  title: '联系我们 | 获取留学路径评估',
+  description: '联系慧研国际教育，获取英联邦本科、硕士、博士、预科、Top-up 与职业规划路径评估。',
 };
 
-const preparation = ['申请阶段', '目标国家或地区', '专业方向', '当前学历', '成绩与语言情况', '经历素材', '预算范围', '时间线'];
+const audiences = [
+  '正在准备本科申请的学生和家庭',
+  '准备英国、港澳、澳洲、新加坡、加拿大硕士申请的本科生',
+  '希望申请博士或研究型硕士的学生',
+  '需要 Pre-Master、Foundation、Top-up 或国际本科路径判断的学生',
+  '希望建立合作关系的教育机构和项目方',
+];
+
+const preparation = ['当前学历', '成绩与均分', '语言成绩', '目标国家或地区', '专业方向', '预算范围', '申请时间线', '过往实习、科研或竞赛经历', '目前最大的困惑'];
+
+const faqs = [
+  { q: '你们是否承诺保证录取？', a: '不承诺保证录取。我们基于真实背景进行评估和规划，帮助提升申请质量和路径匹配度。' },
+  { q: '你们主要做哪些国家？', a: '目前重点覆盖英国、港澳、澳洲、新加坡、加拿大等英联邦及主流英语留学地区。' },
+  { q: '是否支持本科、硕士、博士？', a: '支持本科、硕士、博士，也支持 Foundation、International Year One、Pre-Master、Top-up 等路径判断。' },
+  { q: '是否支持 B 端合作？', a: '支持。我们可与高报机构、国际本科项目、教育咨询机构和合作顾问团队建立学生转介和申请执行合作。' },
+  { q: '是否支持入学后的服务？', a: '可支持学术辅导、论文指导、职业规划、签证续签和英国本地事务衔接。' },
+  { q: '咨询前一定要有雅思成绩吗？', a: '不一定。没有语言成绩也可以先做路径判断，但正式申请前需要根据目标院校要求补充语言规划。' },
+];
 ---
 
 <Layout metadata={metadata}>
@@ -15,7 +32,7 @@ const preparation = ['申请阶段', '目标国家或地区', '专业方向', '�
       <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D8B45F]">Contact Huiyan</p>
       <h1 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-5xl">联系我们</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
-        如果你正在准备留学申请，可以把背景、目标和时间线发给我们。我们会先帮助你判断下一步更适合如何推进。
+        告诉我们你的申请阶段、目标国家、专业方向和时间线，我们会帮你判断下一步应该先解决什么。
       </p>
     </div>
   </section>
@@ -24,8 +41,16 @@ const preparation = ['申请阶段', '目标国家或地区', '专业方向', '�
     <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3">
       <article class="rounded-sm border border-slate-200 p-6 lg:col-span-1">
         <h2 class="text-2xl font-bold text-[#0B1F3A]">联系方式</h2>
-        <p class="mt-4 leading-7 text-slate-600">Email: huiyanliuxue.info@gmail.com</p>
-        <div class="mt-6 border-t border-slate-200 pt-6">
+        <div class="mt-5 space-y-3 leading-7 text-slate-600">
+          <p>Email: <a class="font-semibold text-[#0B1F3A] hover:underline" href="mailto:huiyanliuxue.info@gmail.com">huiyanliuxue.info@gmail.com</a></p>
+          <p>英国电话：+44 7722 173941</p>
+          <p>中国电话：+86 152 2236 0326</p>
+          <p>英国办公室：55 Lindley House, The Hyde, Hendon, London, NW9 6GF, United Kingdom</p>
+        </div>
+        <a class="mt-6 inline-flex rounded-sm bg-[#D8B45F] px-5 py-3 font-semibold text-[#071A31] transition hover:bg-[#E5C878]" href="mailto:huiyanliuxue.info@gmail.com">
+          邮件联系
+        </a>
+        <div class="mt-8 border-t border-slate-200 pt-6">
           <img
             src="/images/huiyan-wechat-qr.jpg"
             alt="慧研顾问微信二维码"
@@ -36,12 +61,11 @@ const preparation = ['申请阶段', '目标国家或地区', '专业方向', '�
           <p class="mt-4 text-center text-sm leading-6 text-slate-600">扫码添加慧研顾问微信，获取初步留学路径评估。</p>
         </div>
       </article>
+
       <article class="rounded-sm border border-slate-200 p-6 lg:col-span-2">
-        <h2 class="text-2xl font-bold text-[#0B1F3A]">适合咨询的人群</h2>
-        <div class="mt-5 grid gap-4 sm:grid-cols-3">
-          <div class="bg-slate-50 p-4 font-semibold text-[#0B1F3A]">学生</div>
-          <div class="bg-slate-50 p-4 font-semibold text-[#0B1F3A]">家长</div>
-          <div class="bg-slate-50 p-4 font-semibold text-[#0B1F3A]">合作机构</div>
+        <h2 class="text-2xl font-bold text-[#0B1F3A]">咨询适合人群</h2>
+        <div class="mt-5 grid gap-4 sm:grid-cols-2">
+          {audiences.map((item) => <div class="bg-slate-50 p-4 font-semibold leading-7 text-[#0B1F3A]">{item}</div>)}
         </div>
       </article>
     </div>
@@ -56,8 +80,23 @@ const preparation = ['申请阶段', '目标国家或地区', '专业方向', '�
           信息越清楚，初步路径评估越有效。没有完整材料也没关系，可以先从已有信息开始。
         </p>
       </div>
-      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {preparation.map((item) => <div class="rounded-sm border border-slate-200 bg-white p-5 font-semibold text-[#0B1F3A]">{item}</div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-[#B8943F]">FAQ</p>
+      <h2 class="mt-3 text-3xl font-bold tracking-normal text-[#0B1F3A] md:text-4xl">常见问题</h2>
+      <div class="mt-10 grid gap-5 md:grid-cols-2">
+        {faqs.map((item) => (
+          <article class="rounded-sm border border-slate-200 p-6">
+            <h3 class="text-lg font-bold text-[#0B1F3A]">{item.q}</h3>
+            <p class="mt-3 leading-7 text-slate-600">{item.a}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
